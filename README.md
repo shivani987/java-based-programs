@@ -1,2 +1,2 @@
 # java-based-programs
-java programs based on employee wage
+Welcome to Employee Wage Computation Program.
