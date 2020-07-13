@@ -5,7 +5,6 @@ public class EmpCheckUC4
      int isPartTime=1;
      int isFullTime=2;
      int empRatePerHr=20;
-     int empHrs=0;
      int randomCheck = (int)(Math.random() *10) % 2;
      switch (randomCheck)
       {
