@@ -1,37 +1,47 @@
-public class EmpCheckUC5
+
+// class for calculating total wage of employee
+public class EmpWageUC5
  {
-   public static void main(String args[]) 
-    {
-     int isPartTime=1;
-     int isFullTime=2;
-     int totalSalary=0;
-     int empRatePerHr=20;
-     int numWorkingDays=20;
-     int salary=0;
-      for( int day=1;day<=numWorkingDays;day++)
+   private static final int IS_PART_TIME=1;
+   private static final int IS_FULL_TIME=2;
+   private static final int EMP_RATE_PER_HR=20;
+   private static final int NUM_WORKING_DAYS=20;
+   public static int empCheck()
+   {
+      int empHrs=0,totalEmpWage=0,empWage=0;
+
+        for( int day=1;day<NUM_WORKING_DAYS;day++)
         {
-           int randomCheck=(int)(Math.random()*(1 + 2 ));
+           int randomCheck=(int)(Math.random()* 3 ) +1;
            switch(randomCheck)
             {
                case 1:
-                  int partTimeEmpHr= isPartTime * 4;
-                  System.out.println("Employee working hours for partTime is :" +partTimeEmpHr);
-                  salary=partTimeEmpHr * empRatePerHr;
-                  totalSalary= totalSalary + salary;
-                  System.out.println("Total salary for partTime job is : " +totalSalary);
+                  empHrs=4;
                   break;
               case 2:
-                  int fullTimeEmpHr= isFullTime * 4;
-                  System.out.println("Employee working hours for fulltime is :" +fullTimeEmpHr);
-                  salary=fullTimeEmpHr * empRatePerHr;
-                  totalSalary= totalSalary + salary;
-                  System.out.println("Total salary for fullTime job is : " +totalSalary);
+                  empHrs=8;
                   break;
              default:
-                 System.out.println("Invalid input");
-                 break;
+                  empHrs=0;
+                  break;
            }
-        }
+            empWage=empHrs * EMP_RATE_PER_HR;
+            totalEmpWage+=empWage;
+        System.out.println("Total employee hours is : " +empWage);
+
+
+      // totalEmpWage=totalEmpHr * EMP_RATE_PER_HR;
+
+       }
+        System.out.println("Total employee wage " +totalEmpWage);
+
+
+        return totalEmpWage; //return total employee wage
+   }
+   public static void main(String args[]) 
+    {
+
+      empCheck(); // calling function
     }
 
  }

@@ -1,4 +1,4 @@
-public class EmpCheckUC6
+public class EmpWageUC6
  {
    public static void main(String args[])
     {
