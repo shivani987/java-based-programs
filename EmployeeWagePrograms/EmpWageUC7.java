@@ -1,7 +1,5 @@
-/** class for calculate total Employee Wage
-  * 
-   *//
-public class EmpCheckUC7
+// class for calculate total Employee Wage
+public class EmpWageUC7
  {
    private static final int IS_PART_TIME=1;
    private static final int IS_FULL_TIME=2;
