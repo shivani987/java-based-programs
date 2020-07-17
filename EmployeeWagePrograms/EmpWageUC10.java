@@ -1,3 +1,4 @@
+//creating class for to manage employeee Wage of multiple companies
 public class EmpWageUC10
  {
    private static final int IS_PART_TIME= 1;
@@ -5,7 +6,7 @@ public class EmpWageUC10
    private int noOfCompany;
    private Company [] companyArr; 
 
-   public  EmpWageUC10()
+   public  EmpWageUC10() //creating constructor
      {
      this.companyArr = new Company[5];
      this.noOfCompany=0;   
@@ -62,6 +63,7 @@ public class EmpWageUC10
       EmpWageUC10 eb = new EmpWageUC10();
         //For Apple
       eb.addCompany("Appple", 20, 20, 100);
+        // For Samsung
       eb.addCompany("Samsung",25, 15, 150);
       eb.ComputeEmpWage();
         
@@ -128,7 +130,7 @@ public class EmpWageUC10
          {
             return totalEmpWage;
          }
-      @Override
+      @Override  //Using toString method for calculating total Employee Wage for each Company
       public String toString(){
              return "Total Employee Wage for Company :" +name+ " is :" +totalEmpWage;
             }
