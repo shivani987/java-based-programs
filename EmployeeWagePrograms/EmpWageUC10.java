@@ -2,13 +2,13 @@ public class EmpWageUC10
  {
    private static final int IS_PART_TIME= 1;
    private static final int IS_FULL_TIME= 2;
-   private int noOfCompany=0;;
+   private int noOfCompany;
    private Company [] companyArr; 
 
    public  EmpWageUC10()
      {
-        companyArr = new Company[5];
-        
+     this.companyArr = new Company[5];
+     this.noOfCompany=0;   
         
      }
    private void addCompany(final String name, final int empRate, final int totalWorkingDays, final int maxHrsInMonth)
@@ -23,8 +23,8 @@ public class EmpWageUC10
         for( int i=0; i< noOfCompany; i++)
          {
             Company company= companyArr[i];
-            this.computeEmpWage(company);
-            System.out.println(company);
+            this.computeEmpWage(companyArr[i]);
+            System.out.println(companyArr[i]);
          }
       }
    private void computeEmpWage(final Company company)
@@ -44,7 +44,7 @@ public class EmpWageUC10
               case 2:
                    empHrs=8;
                    break;
-             default:
+              default:
                   empHrs=0;
                    break;
             }
@@ -63,7 +63,7 @@ public class EmpWageUC10
         //For Apple
       eb.addCompany("Appple", 20, 20, 100);
       eb.addCompany("Samsung",25, 15, 150);
-      eb.computeEmpWage();
+      eb.ComputeEmpWage();
         
 
     }
