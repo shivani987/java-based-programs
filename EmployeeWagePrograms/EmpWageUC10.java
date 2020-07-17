@@ -70,7 +70,6 @@ public class EmpWageUC10
 
     }
  }
-
    // class for setter and getter for computing details of companies
    class Company
      {

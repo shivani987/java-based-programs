@@ -1,4 +1,4 @@
-public class Charge
+public class Charge1
  {
    private final double rx, ry;
    private final double q;
