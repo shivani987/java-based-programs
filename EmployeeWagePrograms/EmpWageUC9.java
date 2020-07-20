@@ -1,3 +1,4 @@
+//Creating class to save the total Wage for Each Company
 public class EmpWageUC9
  {
    private static final int IS_PART_TIME= 1;
@@ -6,6 +7,7 @@ public class EmpWageUC9
    {
       //variables
       int empHrs=0, totalEmpHrs=0,totalWorkingDays=0;
+     //Computation
       while(totalEmpHrs <= company.getMaxHrsInMonth() && totalWorkingDays < company.getTotalWorkingDays())
        {
           totalWorkingDays++;

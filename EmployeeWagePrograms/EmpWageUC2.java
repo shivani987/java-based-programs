@@ -1,3 +1,5 @@
+// Creating class for Calculating Daily Employee Wage
+
 public class EmpWageUC2
  {
    private static final int IS_FULL_TIME=1;

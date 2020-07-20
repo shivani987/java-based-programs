@@ -20,6 +20,12 @@ public class FinalSolution implements ComputeWage
 	     this.map = new HashMap<>();
 
 	     }
+
+      /*
+         Creating method of AddCompany
+         Creating method of computeWage
+         @return Total Employee Wage
+       */
 	   @Override
 	   public void addCompany(final String name, final int empRate, final int totalWorkingDays, final int maxHrsInMonth)
 	      {
@@ -40,7 +46,7 @@ public class FinalSolution implements ComputeWage
 	   {
 	      //variables
 	      int empHrs=0, totalEmpHrs=0,totalWorkingDays=0;
-
+         // Computation
 	      while(totalEmpHrs <= company.getMaxHrsInMonth() && totalWorkingDays < company.getTotalWorkingDays())
 	       {
 	          totalWorkingDays++;
@@ -63,6 +69,7 @@ public class FinalSolution implements ComputeWage
        final int wage = totalEmpHrs * company.getEmpRate();
        company.setTotalEmpWage(wage);
    }
+
      @Override
      public int getTotalWageByCompanyName(final String name) 
      {
@@ -81,18 +88,18 @@ public class FinalSolution implements ComputeWage
       cb.addCompany("Samsung",25, 15, 150);
       cb.computeWage();
       final int appleWage=cb.getTotalWageByCompanyName("Apple");
-      System.out.println("Total Employee Wage for Company :" +appleWage);
+      System.out.println("Total Employee Wage for Company :" +appleWage); //getting employee wage of apple company
     }
 	
-}
+}   // Creating interface
     interface ComputeWage
      {
-   void addCompany(final String name, final int empRate, final int totalWorkingDays, final int maxHrsInMonth);
-   void computeWage();
-   int getTotalWageByCompanyName(String name);
+    void addCompany(final String name, final int empRate, final int totalWorkingDays, final int maxHrsInMonth);
+    void computeWage();
+    int getTotalWageByCompanyName(String name);
      }
 
-// class for setter and getter for computing details of companies
+   // class for setter and getter for computing details of companies
    class Company
    {
    private String name;

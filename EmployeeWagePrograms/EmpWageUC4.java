@@ -1,3 +1,4 @@
+// Creating Class for Calculating Employee Wage using Switch Case
 public class EmpWageUC4
  {
   private static final int IS_PART_TIME=1;

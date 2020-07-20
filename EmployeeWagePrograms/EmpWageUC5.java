@@ -1,4 +1,3 @@
-
 // class for calculating total wage of employee
 public class EmpWageUC5
  {
@@ -8,6 +7,7 @@ public class EmpWageUC5
    private static final int NUM_WORKING_DAYS=20;
    public static int empCheck()
    {
+      //Variables
       int empHrs=0,totalEmpWage=0,empWage=0;
 
         for( int day=1;day<NUM_WORKING_DAYS;day++)
@@ -18,10 +18,10 @@ public class EmpWageUC5
                case 1:
                   empHrs=4;
                   break;
-              case 2:
+               case 2:
                   empHrs=8;
                   break;
-             default:
+               default:
                   empHrs=0;
                   break;
            }

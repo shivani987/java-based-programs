@@ -12,6 +12,12 @@ public class EmpWageUC10
      this.noOfCompany=0;   
         
      }
+
+     /*
+       Creating method addCompany
+       Creating ComputeEmpWage
+       Creating computeEmpWage
+      */
    private void addCompany(final String name, final int empRate, final int totalWorkingDays, final int maxHrsInMonth)
       { 
         final Company company=new Company(name, empRate, totalWorkingDays, maxHrsInMonth);
@@ -28,6 +34,7 @@ public class EmpWageUC10
             System.out.println(companyArr[i]);
          }
       }
+
    private void computeEmpWage(final Company company)
    {
       //variables

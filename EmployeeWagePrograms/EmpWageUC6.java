@@ -1,43 +1,49 @@
+// Creating claas for calculating Employee Wage till a condition reach
 public class EmpWageUC6
- {
-   public static void main(String args[])
-    {
-      int IS_PART_TIME=1;
-      int IS_FULL_TIME=2;
-      int MAX_HRS_IN_MONTH=10;
-      int EMP_RATE_PER_HR=20;
-      int NUM_WORKING_DAYS=20;
-      int totalEmpHrs=0;
-      int totalWorkingDays=0;
-      int partTimeTotalEmpHrs=0;
-      int fullTimeTotalEmpHrs=0;
-       
-      while ( totalEmpHrs < MAX_HRS_IN_MONTH && totalWorkingDays < NUM_WORKING_DAYS)
-      {
-         totalWorkingDays++;
-         int randomCheck =(int)(Math.random()* (1 + 2 ));
-           switch(randomCheck)
-            {
-               case 1:
-                 int partTimeEmpHrs= IS_PART_TIME * 4;
-                 partTimeTotalEmpHrs=totalEmpHrs + partTimeTotalEmpHrs;
-                 System.out.println("Total Employee Hours for partTime :" +partTimeTotalEmpHrs);
+{
+   private static final int IS_PART_TIME=1;
+   private static final int IS_FULL_TIME=2;
+   private static final int EMP_RATE_PER_HR=20;
+   private static final int NUM_WORKING_DAYS=20;
+   private static final int MAX_HRS_IN_MONTH=100;
 
-                 int partTimeTotalSalary=partTimeTotalEmpHrs * EMP_RATE_PER_HR;
-                 System.out.println("Total salary for partTime employee :" +partTimeTotalSalary);
+   // Creating Function  
+   public static int empCheck()
+     {
+        //variables
+       int empHrs=0,totalEmpHrs=0,totalWorkingDays=0,totalEmpWage=0;
+       //Computation
+       while(totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_WORKING_DAYS)
+         {
+	         totalWorkingDays++;
+            int randomCheck=(int)(Math.random()* 3 ) +1;
+            switch(randomCheck)
+             {
+               case 1:
+               empHrs=4;
                break;
                case 2:
-                 int fullTimeEmpHrs= IS_FULL_TIME * 4;
-                 fullTimeTotalEmpHrs=totalEmpHrs + fullTimeEmpHrs;
-                 System.out.println("Total Employee Hours for fullTime :" +fullTimeTotalEmpHrs);
-                 
-                 int fullTimeTotalSalary=fullTimeTotalEmpHrs * EMP_RATE_PER_HR;
-                 System.out.println("Total salary for fullTime employee :" +fullTimeTotalSalary);
+               empHrs=8;
                break;
                default:
-                  System.out.println("Invalid input");
+               empHrs=0;
                break;
              }
-       }
-    }
+            totalEmpHrs=empHrs + totalEmpHrs;
+           System.out.println("Day#" + totalWorkingDays + "Emp Hr:" +empHrs);
+        }
+           totalEmpWage=totalEmpHrs * MAX_HRS_IN_MONTH;
+          System.out.println("Total employee wage " +totalEmpWage);
+          //return total employee wage
+	       return totalEmpWage;
+   }
+       public static void main(String args[])
+        {
+
+         empCheck(); // calling function
+        }
+
  }
+
+
+
