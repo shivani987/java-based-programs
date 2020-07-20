@@ -3,7 +3,7 @@
    Employee wages for multiple 
    Companies
    **/
-public class EmpCheckUC8
+public class EmpWageUC8
  {
    private static final int IS_PART_TIME= 1;
    private static final int IS_FULL_TIME= 2;
@@ -12,9 +12,10 @@ public class EmpCheckUC8
    {
       //variables
       int empHrs=0, totalEmpHrs=0,totalWorkingDays=0;
+      //Computation
       while(totalEmpHrs <= company.getMaxHrsInMonth() && totalWorkingDays < company.getTotalWorkingDays())
        {
-          totalWorkingDays++;
+          totalWorkingDays++; //incrementation
           final int value=(int) Math.floor(Math.random() * 10) % 3;
           switch(value)
             {
